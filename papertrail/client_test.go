@@ -161,7 +161,7 @@ func getMessages(t *testing.T, conn net.Conn, messages int) (string, error) {
 	reader := bufio.NewReader(conn)
 	var buffer bytes.Buffer
 	for i := 0; i < messages; i++ {
-		// Fist 3 chars are size, ignore them
+		// First 3 chars are size, ignore them
 		_, _ = reader.ReadByte()
 		_, _ = reader.ReadByte()
 		_, _ = reader.ReadByte()
